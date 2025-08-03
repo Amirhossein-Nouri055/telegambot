@@ -18,10 +18,10 @@ logger = logging.getLogger(__name__)
 TOKEN = "7695882385:AAErvHK3zKI-OukdNKKk6UVckt-c-RGcl74"
 
 # Channel IDs
-CHANNEL_IDS = ["-1002665968223"]
+CHANNEL_IDS = ["-1002633120419"]
 
 # Admin Chat ID
-ADMIN_CHAT_ID = "601080183"
+ADMIN_CHAT_ID = "1451384311"
 
 # Product data storage
 PRODUCT_DATA_STORE: Dict[str, Dict[str, Any]] = {}
@@ -431,4 +431,5 @@ def main():
     )
 
 if __name__ == '__main__':
+
     main()
