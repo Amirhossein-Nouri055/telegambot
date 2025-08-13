@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Bot token
-TOKEN = "7695882385:AAErvHK3zKI-OukdNKKk6UVckt-c-RGcl74"
+TOKEN = "7695882385:AAG28Y2oHd2InS9yVXd5XakrHarJjSHcaKs"
 
 # Channel IDs
 CHANNEL_IDS = ["-1002665968223"]
