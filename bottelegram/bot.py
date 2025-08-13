@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Bot token
-TOKEN = "7695882385:AAGZVIhYEfgp7Ehd-y4LHYwqlQYBT9w-WpY"
+TOKEN = "7695882385:AAErvHK3zKI-OukdNKKk6UVckt-c-RGcl74"
 
 # Channel IDs
 CHANNEL_IDS = ["-1002665968223"]
@@ -97,12 +97,12 @@ def clean_old_data():
 async def get_gold_price() -> Tuple[Optional[int], Optional[str]]:
     cached_price = gold_price_cache.get()
     if cached_price is not None:
-        return cached_price, None
+        return cached_price + 400000, None
 
     async with gold_price_cache._lock:
         cached_price = gold_price_cache.get()
         if cached_price is not None:
-            return cached_price, None
+            return cached_price + 400000, None 
 
         url = "https://www.tgju.org/profile/geram18"
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
@@ -122,7 +122,7 @@ async def get_gold_price() -> Tuple[Optional[int], Optional[str]]:
             if price_tag:
                 price_str = price_tag.text.strip().replace(",", "")
                 try:
-                    price = int(price_str)
+                    price = int(price_str) + 400000 
                     gold_price_cache.update(price)
                     return price, None
                 except ValueError:
@@ -431,6 +431,4 @@ def main():
     )
 
 if __name__ == '__main__':
-
     main()
-
