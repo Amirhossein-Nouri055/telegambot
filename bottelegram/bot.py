@@ -384,15 +384,14 @@ async def button_callback(update: telegram.Update, context: telegram.ext.Context
     )
     
     message = (
-        f"💰 قیمت طلا (هر گرم): {price_per_gram // 10:,} تومان\n"
-        f"💵 قیمت کل: {total_price // 10:,} تومان"
+        f"💰 قیمت فعلی این کالا: {total_price // 10:,} تومان"
     )
     
     try:
         await query.answer(message, show_alert=True)
     except Exception as e:
         logger.error(f"Error sending result: {e}")
-        short_message = f"💵 قیمت کل: {total_price // 10:,} تومان"
+        short_message = f"💰 قیمت فعلی این کالا: {total_price // 10:,} تومان"
         await query.answer(short_message, show_alert=True)
 
 # Error handler
