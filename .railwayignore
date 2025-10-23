@@ -1,0 +1,7 @@
+product_data.json
+product_data_backup.json
+*.log
+__pycache__/
+*.pyc
+.env
+.git/
