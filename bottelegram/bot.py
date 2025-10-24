@@ -21,7 +21,7 @@ TOKEN = "7695882385:AAH8uuK4V6FCTI6zZGzU76Ct_fn_cv6pQbc"
 CHANNEL_IDS = ["-1002665968223"]
 
 # Admin Chat ID
-ADMIN_CHAT_ID = "601080183"
+ADMIN_CHAT_ID = "her4"
 
 # Product data storage
 PRODUCT_DATA_STORE: Dict[str, Dict[str, Any]] = {}
