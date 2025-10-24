@@ -1,6 +1,0 @@
-python-telegram-bot==20.7
-aiohttp==3.9.1
-beautifulsoup4==4.12.2
-psycopg2-binary==2.9.9
-sqlalchemy==2.0.23
-lxml==4.9.3
