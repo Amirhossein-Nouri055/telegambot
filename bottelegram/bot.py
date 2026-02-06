@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 import logging
 from datetime import datetime, timedelta
 from typing import Optional, Tuple, Dict, Any
+import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -19,9 +20,9 @@ TOKEN = "7695882385:AAH8uuK4V6FCTI6zZGzU76Ct_fn_cv6pQbc"
 
 # Channel IDs
 CHANNEL_IDS = ["-1002665968223"]
-
+# 1002633120419
 # Admin Chat ID
-ADMIN_CHAT_ID = "601080183"
+ADMIN_CHAT_ID = "1451384311"
 
 # Product data storage
 PRODUCT_DATA_STORE: Dict[str, Dict[str, Any]] = {}
@@ -468,7 +469,7 @@ def main():
     load_product_data()
     clean_old_data()
     auto_backup()  # Create backup on startup
-    
+
     application = Application.builder().token(TOKEN).build()
     
     conv_handler = ConversationHandler(
